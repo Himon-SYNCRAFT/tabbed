@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const char font[]        = "monospace:size=9";
-static const char* normbgcolor  = "#222222";
-static const char* normfgcolor  = "#cccccc";
-static const char* selbgcolor   = "#555555";
-static const char* selfgcolor   = "#ffffff";
-static const char* urgbgcolor   = "#111111";
-static const char* urgfgcolor   = "#cc0000";
+static const char font[]        = "SauceCodePro Nerd Font:pixelsize=15:antialias=true:autohint=true";
+static const char* normbgcolor  = "#312e39";
+static const char* normfgcolor  = "#ebdbb2";
+static const char* selbgcolor   = "#342d59";
+static const char* selfgcolor   = "#ebdbb2";
+static const char* urgbgcolor   = "#c72e68";
+static const char* urgfgcolor   = "#ebdbb2";
 static const char before[]      = "<";
 static const char after[]       = ">";
 static const char titletrim[]   = "...";
@@ -39,10 +39,10 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,     XK_Return, focusonce,   { 0 } },
 	{ MODKEY|ShiftMask,     XK_Return, spawn,       { 0 } },
 
-	{ MODKEY|ShiftMask,     XK_l,      rotate,      { .i = +1 } },
-	{ MODKEY|ShiftMask,     XK_h,      rotate,      { .i = -1 } },
-	{ MODKEY|ShiftMask,     XK_j,      movetab,     { .i = -1 } },
-	{ MODKEY|ShiftMask,     XK_k,      movetab,     { .i = +1 } },
+	{ MODKEY|ShiftMask,     XK_k,      rotate,      { .i = +1 } },
+	{ MODKEY|ShiftMask,     XK_j,      rotate,      { .i = -1 } },
+	{ MODKEY|ShiftMask,     XK_h,      movetab,     { .i = -1 } },
+	{ MODKEY|ShiftMask,     XK_l,      movetab,     { .i = +1 } },
 	{ MODKEY,               XK_Tab,    rotate,      { .i = 0 } },
 
 	{ MODKEY,               XK_grave,  spawn,       SETPROP("_TABBED_SELECT_TAB") },
@@ -57,7 +57,7 @@ static Key keys[] = {
 	{ MODKEY,               XK_9,      move,        { .i = 8 } },
 	{ MODKEY,               XK_0,      move,        { .i = 9 } },
 
-	{ MODKEY,               XK_q,      killclient,  { 0 } },
+	{ MODKEY,               XK_x,      killclient,  { 0 } },
 
 	{ MODKEY,               XK_u,      focusurgent, { 0 } },
 	{ MODKEY|ShiftMask,     XK_u,      toggle,      { .v = (void*) &urgentswitch } },
